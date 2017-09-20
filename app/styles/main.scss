@@ -1,0 +1,26 @@
+//body
+body{ margin: 0!important;
+	
+}
+
+
+
+
+//fonts extended
+%avenir-next { font-family: 'Avenir Next'; }
+%avenir-demi { font-family: 'Avenir Next Demi'; -webkit-font-smoothing: antialiased; }
+%avenir-ultra { font-family: 'Avenir Next Ultra'; }
+%circular-book {font-family: 'Circular Std Book';-webkit-font-smoothing: antialiased;}
+%circular-medium { font-family: 'Circular Std Medium'; -webkit-font-smoothing: antialiased;}
+%circular-bold {font-family:'Circular Std Bold'; -webkit-font-smoothing: antialiased;}
+
+
+//radiology_labs partials
+@import "partials/home.scss";
+
+//radiology_labs fonts and icons
+@import 'fonts/avenir/stylesheet.css';
+@import 'fonts/icons/style.css';
+@import  'fonts/circular/stylesheet.css';
+@import 'fonts/font-awesome-4.7.0/css/font-awesome.css';
+@import 'fonts/font-awesome-4.7.0/scss/font-awesome.scss';
