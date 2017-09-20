@@ -2,7 +2,7 @@
 	.inner-content{ max-width: 1280px !important; padding-left: 110px !important; padding-right: 110px !important; margin: auto !important;	position: relative!important;
 		.left-content{ height: 700px; float: left; width: 55%; text-align: left;
 			.blurb-content{ padding-top: 60px;
-				.title{ color: #ffffff !important; @extend %circular-bold; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: -0.8px !important; padding-top: 120px !important; padding-bottom: 8px !important; width: 110%;
+				.title{ color: #ffffff !important; @extend %circular-bold; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: -0.8px !important; padding-top: 120px !important; padding-bottom: 8px !important; width: 113%;
 				}
 				.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;
 					
@@ -10,6 +10,8 @@
 				.email-section{ margin-top: 32px; width: 100%; padding: 15px; border-radius: 3px; background: #fff; display: inline-block;
 					.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book; padding-bottom: 12px;
 						
+					}
+					.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
 					}
 				}
 			}
