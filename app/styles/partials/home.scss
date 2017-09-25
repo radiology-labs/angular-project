@@ -1,22 +1,51 @@
-.top-section{ background-color: #78c878 !important; background: -webkit-radial-gradient(farthest-corner at 60px 60px, #8CE071 0%, #00a699 70%) !important; background: -moz-radial-gradient(farthest-corner at 60px 60px, #8CE071 0%, #00a699 70%) !important; background: radial-gradient(farthest-corner at 60px 60px, #8CE071 0%, #00a699 70%) !important; overflow: hidden !important;
+.top-section{ background-color: #78c878 !important; background:linear-gradient(-180deg, rgba(140,224,113,0.84) 0%, rgba(0,166,153,0.67) 100%) !important; overflow: hidden !important;
 	.inner-content{ max-width: 1280px !important; padding-left: 110px !important; padding-right: 110px !important; margin: auto !important;	position: relative!important;
+		@media only screen and (max-width: 1128px) { padding-left: 20px!important; padding-right: 20px!important; 
+		
+		}
 		.left-content{ height: 700px; float: left; width: 55%; text-align: left;
-			.blurb-content{ padding-top: 60px;
-				.title{ color: #ffffff !important; @extend %circular-bold; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: -0.8px !important; padding-top: 120px !important; padding-bottom: 8px !important; width: 113%;
+			@media only screen and (max-width: 900px) { width: 100%!important;
+		
+			}
+			.blurb-content{ padding-top: 20px; display: inline-block;
+				.title{ color: #ffffff !important; @extend %circular-bold; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: -0.8px !important; padding-top: 120px !important; padding-bottom: 8px !important; width: 113%;	
+					@media only screen and (max-width: 900px) { width: 100%!important; padding-top: 30px !important;	
+					}
 				}
 				.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;
 					
 				}
 				.email-section{ margin-top: 32px; width: 100%; padding: 15px; border-radius: 3px; background: #fff; display: inline-block;
+					@media only screen and (max-width: 900px) { padding: 0px !important;
+					}
 					.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book; padding-bottom: 12px;
 						
 					}
 					.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
+						@media only screen and (max-width: 900px) { border-radius: 0px 4px 4px 0px;	padding: 11px;
+						}
 					}
 				}
 			}
 		}
 		.right-content{  float: right; width: 40%; height: 700px;
+			@media only screen and (max-width: 900px) { display: none !important;
+		
+			}
+			
+		}
+	}
+}
+
+.second-section { background: #fff; width: 100%; overflow: hidden !important;
+	.inner-content{ max-width: 1280px !important; padding-left: 110px !important; padding-right: 110px !important; margin: auto !important;	position: relative!important; display: inline-block; text-align: left; width: 100%; padding-top: 48px; padding-bottom: 48px;
+		@media only screen and (max-width: 1128px) { padding-left: 20px!important; padding-right: 20px!important; 
+		
+		}
+		.title{ font-size: 36px; @extend %circular-bold; display: inline-block; color: #484848; line-height: 44px; padding: 6px 0px; letter-spacing: -0.6px !important;
+			
+		}
+		.subtext{ font-size: 19px; @extend %avenir-next; color: #484848; padding-right: 40px;
 			
 		}
 	}
