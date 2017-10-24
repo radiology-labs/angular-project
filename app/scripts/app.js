@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'radiologyLabsApp.factory'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -27,6 +28,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  }).config(['$locationProvider', function($locationProvider) {
+  }).config(['$locationProvider', '$httpProvider', function($locationProvider, $httpProvider) {
   $locationProvider.hashPrefix('');
+  $httpProvider.defaults.useXDomain = true;
   }]);

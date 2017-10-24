@@ -1,4 +1,4 @@
-
+<div ng-include="'views/partials/signup-beta.html'" ng-if="beta.open"></div>
 <div class="top-section">
 	<div class="inner-content">
 		<div ng-include="'views/partials/header.html'"></div>
@@ -7,17 +7,17 @@
 				<div class="title">
 					Building the Future of Medical Imaging Analysis Together
 				</div>
-				<div class="blurb">Kimono Labs enables you to develop and deploy deep learnign detection algorithms to revolutionize medical imaging analysis.</div>
+				<div class="blurb">Kimono enables you to develop and deploy deep learning detection algorithms to revolutionize medical imaging analysis.</div>
 				<div class="email-section">
 					<form>
-						<input class="email-input" type="email" placeholder="Signup For Early Access">
-						<button class="signup-button">Sign Up</button>
+						<input class="email-input" type="email" placeholder="Signup For Early Access" ng-model="beta.email" >
+						<button class="signup-button" ng-click="beta.open=true;">Sign Up</button>
 					</form>
 				</div>
 			</div>
 		</div>
 		<div class="right-content">
-			<img src="../images/image-analysis.png"/>
+			<img src="/images/image-analysis.png"/>
 		</div>
 	</div>
 </div>
@@ -25,6 +25,62 @@
 <div class="second-section">
 	<div class="inner-content">
 		<div class="title">From Discovery to Deployment</div>
-		<div class="subtext">KimonoLabs allows researchers to develop, validate and integrate image analysis detection algorithms into the most popular clinical imaging devices and solutions</div>
+		<div class="subtext">Kimono allows researchers to develop, validate and integrate image analysis detection algorithms into the most popular clinical imaging devices and solutions.</div>
+		<div class="step-section">
+			<div class="step-wrapper">
+				<div class="step-container">
+					<div class="step-number-wrapper">
+						<span class="step-number">1</span>
+					</div>
+					<div class="step-title-container">
+						<h4 class="step-title">Develop</h4>
+					</div>
+					<div class="step-blurb">Develop your detection algorithm in a language of your choosing. Kimono will push your code into a production ready cloud environment.</div>
+				</div>
+			</div>
+			<div class="step-wrapper">
+				<div class="step-container">
+					<div class="step-number-wrapper">
+						<span class="step-number">2</span>
+					</div>
+					<div class="step-title-container">
+						<h4 class="step-title">Validate</h4>
+					</div>
+					<div class="step-blurb">Test your algorithm against an independent data set and run simulations.</div>
+				</div>
+			</div>
+			<div class="step-wrapper">
+				<div class="step-container">
+					<div class="step-number-wrapper">
+						<span class="step-number">3</span>
+					</div>
+					<div class="step-title-container">
+						<h4 class="step-title">Integrate</h4>
+					</div>
+					<div class="step-blurb">Integrate your detection algorithms into clinical software devices and solutions.</div>
+				</div>
+			</div>
+		</div>
+		<div class="signup-section">
+			<div class="signup-button" ng-click="beta.open=true;">Signup For Early Access</div>
+		</div>
+	</div>
+</div>
+<div class="third-section">
+	<div class="inner-content">
+		<h1>Your Discoveries Connected</h1>
+		<div class="left-content">
+			<img src="/images/data-funnel.png" />
+		</div>
+		<div class="right-content">
+			<h4 class="title">Start Connecting</h4>
+			<p class="blurb">Kimono integrates with the major medical imaging platforms including GE, Siemens, and other leading medical imaging platforms.</p>
+			<div class="email-section">
+				<form>
+					<input class="email-input" type="email" ng-model="beta.email"placeholder="Signup For Early Access">
+					<button class="signup-button" ng-click="beta.open=true;">Sign Up</button>
+				</form>
+			</div>
+		</div>
 	</div>
 </div>
