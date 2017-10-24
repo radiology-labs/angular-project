@@ -1,9 +1,9 @@
-.modal-header { @extend %circular-book; color: #484848; font-size: 36px; -webkit-font-smoothing: antialiased; text-align: left; }
-.blurb { @extend %avenir-next; color: #484848; font-size: 24px; -webkit-font-smoothing: antialiased; text-align: left; letter-spacing: 0px; font-size: 18px;
+.modal-header { @extend %circular-book !optional; color: #484848; font-size: 36px; -webkit-font-smoothing: antialiased; text-align: left; }
+.blurb { @extend %avenir-next !optional; color: #484848; font-size: 24px; -webkit-font-smoothing: antialiased; text-align: left; letter-spacing: 0px; font-size: 18px;
 }
-.email-input-confirmation{ width: 50%; @extend %circular-book; font-size: 19px !important; line-height: 24px !important;  color: #484848 !important; border-width: 1px !important; border-style: solid !important;  border-radius: 2px !important;  background-color: #ffffff !important; position: relative !important;  z-index: 0 !important; margin-bottom: 0px !important; margin-top: 0px !important; margin-left: 0px !important; border-color: #ffffff !important; border: 1px solid #DBDBDB !important; height: 32px !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; padding-left:10px; outline: none; margin-right: 30px; }
-.button-confirmation { display: inline-block; text-decoration: none!important; border: 2px solid transparent !important !important; border-radius: 4px !important; @extend %circular-bold; color: #fff!important; padding: 12px 24px!important; background: #00a699!important; font-size: 20px!important;  height: auto !important; margin-left: 0 !important;}
-mce_inline_error{@extend %circular-book;}
+.email-input-confirmation{ width: 50%; @extend %circular-book !optional; font-size: 19px !important; line-height: 24px !important;  color: #484848 !important; border-width: 1px !important; border-style: solid !important;  border-radius: 2px !important;  background-color: #ffffff !important; position: relative !important;  z-index: 0 !important; margin-bottom: 0px !important; margin-top: 0px !important; margin-left: 0px !important; border-color: #ffffff !important; border: 1px solid #DBDBDB !important; height: 32px !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; padding-left:10px; outline: none; margin-right: 30px; }
+.button-confirmation { display: inline-block; text-decoration: none!important; border: 2px solid transparent !important !important; border-radius: 4px !important; @extend %circular-bold !optional; color: #fff!important; padding: 12px 24px!important; background: #00a699!important; font-size: 20px!important;  height: auto !important; margin-left: 0 !important; }
+mce_inline_error{@extend %circular-book !optional;}
 
-.confirmation-message{ @extend %circular-book; font-size: 38px; text-align: center; color: #484848; }
+.confirmation-message{ @extend %circular-book !optional; font-size: 38px; text-align: center; color: #484848; }
 .close-modal {cursor: pointer; z-index : 10000; position: absolute; right: 72px;  }

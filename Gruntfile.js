@@ -1,4 +1,4 @@
-// Generated on 2017-09-19 using generator-angular 0.16.0
+// Generated on 2017-05-28 using generator-angular 0.16.0
 'use strict';
 
 // # Globbing
@@ -18,15 +18,47 @@ module.exports = function (grunt) {
     ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn'
   });
+  
+  grunt.loadNpmTasks('grunt-aws-s3');
+    
+    // Load S3 plugin
+  grunt.loadNpmTasks('grunt-aws');
+
+  // Static Webserver
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: 'dist',
+    s3AccessKey: grunt.option('s3AccessKey') || '',
+    s3SecretAccessKey: grunt.option('s3SecretAccessKey') || '',
+    s3Bucket: grunt.option('s3Bucket') || 'kimono.ai',
   };
+  
+  
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+
+  	aws_s3: {
+        options: {
+            accessKeyId: appConfig.s3AccessKey,
+            secretAccessKey: appConfig.s3SecretAccessKey,
+            bucket: appConfig.s3Bucket,
+            region: 'us-east-1',
+        },
+        production: {
+          files: [
+              { expand: true,
+                dest: '.',
+                cwd: 'dist/',
+                src: ['**'],
+                differential: true }
+            ]
+        }
+    },
+
 
     // Project settings
     yeoman: appConfig,
@@ -61,7 +93,7 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
+          '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -307,15 +339,18 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+     cssmin: {
+       options: {
+       		processImport: false
+    	},
+       dist: {
+         files: {
+           '<%= yeoman.dist %>/styles/main.css': [
+             '.tmp/styles/{,*/}*.css'
+           ]
+         }
+       }
+     },
     // uglify: {
     //   dist: {
     //     files: {
@@ -341,6 +376,13 @@ module.exports = function (grunt) {
     },
 
     svgmin: {
+      options: {
+	  plugins: [{
+      collapseGroups: false
+    }, {
+      removeUnknownsAndDefaults: false
+    }]
+  },
       dist: {
         files: [{
           expand: true,
@@ -371,7 +413,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'radiologyLabsApp',
+          module: 'practicePushAngularApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -413,14 +455,28 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'images/{,*/}*.{svg}'
           ]
         }, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
-        }]
+        }, {
+          expand: true,
+          cwd: '.',
+          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          dest: '<%= yeoman.dist %>'
+        },
+        {
+          expand: true,
+          cwd: '.',
+          src: 'bower_components/icomoon-bower/fonts/*',
+          dest: '<%= yeoman.dist %>'
+        }
+        
+        ]
       },
       styles: {
         expand: true,
@@ -441,7 +497,8 @@ module.exports = function (grunt) {
       dist: [
         'compass:dist',
         'imagemin',
-        'svgmin'
+        //breaks all the time
+        //'svgmin'
       ]
     },
 
@@ -508,4 +565,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+  grunt.registerTask('deploy', ['build','aws_s3']);
 };

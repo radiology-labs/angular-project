@@ -11,16 +11,16 @@ body{ margin: 0!important;
 	}
 }
 
-.indicates-required { @extend %circular-book; color: #484848!important;}
+.indicates-required { @extend %circular-book !optional; color: #484848!important;}
 
-label{ @extend %circular-book; color: #484848 !important;}
+label{ @extend %circular-book !optional; color: #484848 !important;}
 
 
-.modal-header { @extend %circular-book; color: #484848 !important; font-size: 36px !important; -webkit-font-smoothing: antialiased; text-align: left; }
-.blurb { @extend %avenir-next; color: #484848; font-size: 24px; -webkit-font-smoothing: antialiased; text-align: left; letter-spacing: 0px; font-size: 18px;
+.modal-header { @extend %circular-book !optional; color: #484848 !important; font-size: 36px !important; -webkit-font-smoothing: antialiased; text-align: left; }
+.blurb { @extend %avenir-next !optional; color: #484848; font-size: 24px; -webkit-font-smoothing: antialiased; text-align: left; letter-spacing: 0px; font-size: 18px;
 }
-.email-input-confirmation{ width: 50%; @extend %circular-book; font-size: 19px !important; line-height: 24px !important;  color: #484848 !important; border-width: 1px !important; border-style: solid !important;  border-radius: 2px !important;  background-color: #ffffff !important; position: relative !important;  z-index: 0 !important; margin-bottom: 0px !important; margin-top: 0px !important; margin-left: 0px !important; border-color: #ffffff !important; border: 1px solid #DBDBDB !important; height: 42px !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; padding-left:10px; outline: none; margin-right: 30px; }
-.submit-button{  display: inline-block; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; @extend %circular-bold; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px; }
+.email-input-confirmation{ width: 50%; @extend %circular-book !optional; font-size: 19px !important; line-height: 24px !important;  color: #484848 !important; border-width: 1px !important; border-style: solid !important;  border-radius: 2px !important;  background-color: #ffffff !important; position: relative !important;  z-index: 0 !important; margin-bottom: 0px !important; margin-top: 0px !important; margin-left: 0px !important; border-color: #ffffff !important; border: 1px solid #DBDBDB !important; height: 42px !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; padding-left:10px; outline: none; margin-right: 30px; }
+.submit-button{  display: inline-block; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; @extend %circular-bold !optional; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px; }
 
 
 //header-section
@@ -28,7 +28,7 @@ label{ @extend %circular-book; color: #484848 !important;}
 .header-wrapper{ width: 100%; display: inline-block; height: 50px; padding: 10px 0;
 	.logo{ float: left; height: 50px;}
 	.signup-right{ float: right; line-height: 50px;
-		.signup-button{ color: #fff; @extend %circular-medium; padding: 9px 16px; border-radius: 22px; border: 1px solid #fff; cursor: pointer;
+		.signup-button{ color: #fff; @extend %circular-medium !optional; padding: 9px 16px; border-radius: 22px; border: 1px solid #fff; cursor: pointer;
 			
 		}
 	}

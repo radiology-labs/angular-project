@@ -8,20 +8,20 @@
 		
 			}
 			.blurb-content{ padding-top: 20px; display: inline-block;
-				.title{ color: #ffffff !important; @extend %circular-bold; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: -0.8px !important; padding-top: 120px !important; padding-bottom: 8px !important; width: 113%;	
+				.title{ color: #ffffff !important; @extend %circular-bold !optional; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: -0.8px !important; padding-top: 120px !important; padding-bottom: 8px !important; width: 113%;	
 					@media only screen and (max-width: 900px) { width: 100%!important; padding-top: 30px !important;	
 					}
 				}
-				.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;
+				.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next !optional; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;
 					
 				}
 				.email-section{ margin-top: 32px; width: 100%; padding: 15px; border-radius: 3px; background: #fff; display: inline-block;
 					@media only screen and (max-width: 900px) { padding: 0px !important;
 					}
-					.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book; padding-bottom: 12px;
+					.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book !optional; padding-bottom: 12px;
 						
 					}
-					.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
+					.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold !optional; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
 						@media only screen and (max-width: 900px) { border-radius: 0px 4px 4px 0px;	padding: 11px;
 						}
 					}
@@ -42,10 +42,10 @@
 		@media only screen and (max-width: 1128px) { padding-left: 20px!important; padding-right: 20px!important; 
 		
 		}
-		.title{ font-size: 36px; @extend %circular-bold; display: inline-block; color: #484848; line-height: 44px; padding: 6px 0px; letter-spacing: -0.6px !important;
+		.title{ font-size: 36px; @extend %circular-bold !optional; display: inline-block; color: #484848; line-height: 44px; padding: 6px 0px; letter-spacing: -0.6px !important;
 			
 		}
-		.subtext{ font-size: 19px; @extend %avenir-next; color: #484848; padding-right: 40px;
+		.subtext{ font-size: 19px; @extend %avenir-next !optional; color: #484848; padding-right: 40px;
 			
 		}
 		.step-section{ display: inline-block; width: 100%; margin-left: -8px; margin-right: -8px;
@@ -55,23 +55,23 @@
 				}
 				.step-container{ margin-top: 48px !important; margin-bottom: 48px !important;
 					.step-number-wrapper{ border: 2px solid #DBDBDB; border-radius: 30px; width: 40px; height: 40px; text-align: center; display: inline-block;
-						.step-number{ line-height: 40px; font-size: 1.5em; @extend %avenir-demi; color: #484848;
+						.step-number{ line-height: 40px; font-size: 1.5em; @extend %avenir-demi !optional; color: #484848;
 							
 						}
 					}	
 					.step-title-container{ margin-top: 24px; margin-bottom: 8px;
-						.step-title{ @extend %circular-bold; color: #484848; margin: 0px!important; font-size: 22px; line-height: 28px; letter-spacing: -0.2px; padding: 0px;
+						.step-title{ @extend %circular-bold !optional; color: #484848; margin: 0px!important; font-size: 22px; line-height: 28px; letter-spacing: -0.2px; padding: 0px;
 						
 						}
 					}
-					.step-blurb{ @extend %avenir-next; font-weight: 300; margin: 0px; font-size: 19px; line-height: 24px; padding: 0px; -webkit-font-smoothing: antialiased;
+					.step-blurb{ @extend %avenir-next !optional; font-weight: 300; margin: 0px; font-size: 19px; line-height: 24px; padding: 0px; -webkit-font-smoothing: antialiased;
 						
 					}
 				}
 			}
 		}
 		.signup-section{ display: inline-block; width: 100%; text-align: left;
-			.signup-button{	display: inline-block; @extend %circular-bold; padding: 16px 25px; border-radius: 4px; background: #5AC6B5; color: #fff;
+			.signup-button{	display: inline-block; @extend %circular-bold !optional; padding: 16px 25px; border-radius: 4px; background: #5AC6B5; color: #fff;
 				
 			}		
 		}
@@ -84,7 +84,7 @@
 		@media only screen and (max-width: 1128px) { padding-left: 20px!important; padding-right: 20px!important; 
 		
 		}
-		h1{ @extend %circular-bold; color: #fff; text-align: center; margin-bottom: 75px; margin-top: 75px;
+		h1{ @extend %circular-bold !optional; color: #fff; text-align: center; margin-bottom: 75px; margin-top: 75px;
 			
 		}
 		.left-content{ height: 500px; float: left; width: 50%; text-align: left; padding-top: 20px;
@@ -99,19 +99,19 @@
 			@media only screen and (max-width: 900px) { width: 100%!important;
 		
 			}
-			.title{ color: #ffffff !important; @extend %circular-book; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: 1px !important; padding-bottom: 8px !important; width: 113%;	
+			.title{ color: #ffffff !important; @extend %circular-book !optional; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: 1px !important; padding-bottom: 8px !important; width: 113%;	
 				@media only screen and (max-width: 900px) { width: 100%!important; padding-top: 30px !important;	
 				}
 			}
-			.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;			
+			.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next !optional; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;			
 			}
 			.email-section{ margin-top: 32px; width: 86%; padding: 15px; border-radius: 3px; background: #fff; display: inline-block;
 					@media only screen and (max-width: 900px) { padding: 0px !important; width: 100%!important;
 					}
-				.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book; padding-bottom: 12px;
+				.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book !optional; padding-bottom: 12px;
 						
 				}
-				.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
+				.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold !optional; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
 					@media only screen and (max-width: 900px) { border-radius: 0px 4px 4px 0px;	padding: 11px;
 					}
 				}
