@@ -1,29 +1,36 @@
 .top-section{ background-color: #78c878 !important; background:linear-gradient(-180deg, rgba(140,224,113,0.84) 0%, rgba(0,166,153,0.67) 100%) !important; overflow: hidden !important; display: inline-block;
-	.inner-content{ max-width: 1080px !important; padding-left: 110px !important; padding-right: 110px !important; margin: auto !important;	position: relative!important;
+	.inner-content{  padding-left: 110px !important; padding-right: 110px !important; margin: auto !important;	position: relative!important;
 		@media only screen and (max-width: 1128px) { padding-left: 20px!important; padding-right: 20px!important; 
 		
 		}
 		.left-content{ height: 700px; float: left; width: 55%; text-align: left;
-			@media only screen and (max-width: 900px) { width: 100%!important;
+			@media only screen and (max-width: 900px) { width: 100%!important; height: 515px!important;
 		
 			}
+			@media only screen and (max-width: 520px) { height:540px!important;
+					} 
 			.blurb-content{ padding-top: 20px; display: inline-block;
 				.title{ color: #ffffff !important; @extend %circular-bold !optional; margin: 0px !important; word-wrap: break-word !important; font-size: 40px !important; line-height: 56px !important; letter-spacing: -0.8px !important; padding-top: 120px !important; padding-bottom: 8px !important; width: 113%;	
 					@media only screen and (max-width: 900px) { width: 100%!important; padding-top: 30px !important;	
 					}
+					@media only screen and (max-width: 520px) { font-size: 30px!important; line-height: 45px !important;
+					} 
 				}
 				.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next !optional; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;
 					
 				}
 				.email-section{ margin-top: 32px; width: 100%; padding: 15px; border-radius: 3px; background: #fff; display: inline-block;
-					@media only screen and (max-width: 900px) { padding: 0px !important;
+					@media only screen and (max-width: 900px) { width: 60%!important;	
 					}
-					.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book !optional; padding-bottom: 12px;
-						
+					@media only screen and (max-width: 550px) { padding: 0px !important; width: 100%!important;
+					}
+					.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book !optional; padding-bottom: 12px; background: transparent;
+						@media screen and (max-width: 550px) { width: 60% !important; padding-top: 13px !important; font-size: 16px !important;
+						} 
 					}
 					.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold !optional; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
-						@media only screen and (max-width: 900px) { border-radius: 0px 4px 4px 0px;	padding: 11px;
-						}
+						@media only screen and (max-width: 900px) { border-radius: 0px 4px 4px 0px;	padding: 11px; height: 100% !important; margin: 0!important; }
+
 					}
 				}
 			}
@@ -43,10 +50,12 @@
 		
 		}
 		.title{ font-size: 36px; @extend %circular-bold !optional; display: inline-block; color: #484848; line-height: 44px; padding: 6px 0px; letter-spacing: -0.6px !important;
+			@media only screen and (max-width: 520px) { font-size: 30px!important; margin-bottom: 22px!important;
+					} 
 			
 		}
 		.subtext{ font-size: 19px; @extend %avenir-next !optional; color: #484848; padding-right: 40px;
-			
+			@media only screen and (max-width:744px){ margin-bottom: 40px!important; }
 		}
 		.step-section{ display: inline-block; width: 100%; margin-left: -8px; margin-right: -8px;
 			.step-wrapper{ width: 31.3333%!important; float: left; padding: 0px 8px; position: relative; display: inline-block;
@@ -54,6 +63,7 @@
 					
 				}
 				.step-container{ margin-top: 48px !important; margin-bottom: 48px !important;
+					@media only screen and (max-width:744px){ margin-top: 5px!important; }
 					.step-number-wrapper{ border: 2px solid #DBDBDB; border-radius: 30px; width: 40px; height: 40px; text-align: center; display: inline-block;
 						.step-number{ line-height: 40px; font-size: 1.5em; @extend %avenir-demi !optional; color: #484848;
 							
@@ -91,7 +101,11 @@
 			@media only screen and (max-width: 900px) { width: 100%!important; height: auto !important;
 		
 			}
-			img{ height: 350px; }
+			img{ height: 350px; 
+				@media only screen and (max-width: 520px) { height: 290px!important;
+		
+			}
+			}
 			
 			
 		}
@@ -106,13 +120,14 @@
 			.blurb{ margin-top: 8px;  word-wrap: break-word !important; font-size: 22px !important; line-height: 28px !important; letter-spacing: -0.2px !important; padding-top: 0px !important; padding-bottom: 0px !important; @extend %avenir-next !optional; -webkit-font-smoothing: antialiased; color: #fff; font-weight: 300;			
 			}
 			.email-section{ margin-top: 32px; width: 86%; padding: 15px; border-radius: 3px; background: #fff; display: inline-block;
-					@media only screen and (max-width: 900px) { padding: 0px !important; width: 100%!important;
+					@media only screen and (max-width: 550px) { padding: 0px !important; width: 100%!important;
 					}
-				.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 12px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book !optional; padding-bottom: 12px;
-						
+				.email-input{padding-left: 12px; width: 65%; float: left; border: 0; border-style: hidden; padding-top: 13px; line-height: normal; font-size: 19px; outline: none; color: #484848; @extend %circular-book !optional; padding-bottom: 12px; background: transparent;
+					@media only screen and (max-width: 550px) { width: 60% !important;padding-top: 14px!important; font-size: 16px!important;
+					} 
 				}
 				.signup-button{ display: inline-block; text-align: center; text-decoration: none; border: 2px solid transparent !important; border-radius: 4px; float: right; @extend %circular-bold !optional; color: #fff; padding: 12px 24px; background: #00a699; font-size: 20px;
-					@media only screen and (max-width: 900px) { border-radius: 0px 4px 4px 0px;	padding: 11px;
+					@media only screen and (max-width: 900px) { border-radius: 0px 4px 4px 0px;	padding: 11px; height: 100%!important; margin: 0!important;
 					}
 				}
 			}

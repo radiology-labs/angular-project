@@ -9,6 +9,7 @@
     "grunt-aws": "^0.6.2",
     "grunt-aws-s3": "^2.0.0",
     "grunt-concurrent": "^1.0.0",
+    "grunt-connect-proxy": "^0.2.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compass": "^1.0.0",
     "grunt-contrib-concat": "^0.5.0",
@@ -40,5 +41,9 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "connect-modrewrite": "^0.10.1",
+    "matchdep": "^2.0.0"
   }
 }
